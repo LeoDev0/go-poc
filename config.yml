@@ -1,0 +1,9 @@
+server:
+  port: 8000
+
+database:
+  connection_string: "host=localhost user=root password=root dbname=go-poc port=5432 sslmode=disable"
+  dbname: "go-poc"
+  dbuser: "root"
+  dbpassword: "root"
+  host: "localhost"
