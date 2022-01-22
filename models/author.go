@@ -1,6 +1,10 @@
 package models
 
+import (
+	"gorm.io/gorm"
+)
+
 type Author struct {
-	Id int `json:"id"`
+	gorm.Model
 	Name string `json:"name"`
 }

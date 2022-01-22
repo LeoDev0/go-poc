@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"log"
 
+	"example.com/go-poc/models"
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
 )
@@ -21,4 +22,7 @@ func DatabaseConnection(conn string) {
 	} else {
 		fmt.Println("Succesfully connected to database")
 	}
+
+	DB.AutoMigrate(&models.Book{})
+	DB.AutoMigrate(&models.Author{})
 }
