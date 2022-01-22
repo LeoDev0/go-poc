@@ -14,8 +14,7 @@ var (
 	err error
 )
 
-func DatabaseConnection(conn string) {
-	connectionString := conn
+func DatabaseConnection(connectionString string) {
 	DB, err = gorm.Open(postgres.Open(connectionString))
 	if err != nil {
 		log.Panic("Error to connect to connect to database: ", err)
