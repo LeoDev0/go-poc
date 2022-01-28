@@ -28,6 +28,7 @@ func HandleRequest(port string) {
 			r.Get("/{id}", controllers.GetBookById)
 			r.Post("/", controllers.CreateBook)
 			r.Delete("/{id}", controllers.DeleteBook)
+			r.Put("/{id}", controllers.UpdateBook)
 		})
 
 		// Authors
